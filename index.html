@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products</title>
+
+  
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  
+  <style>
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: black;
+    }
+
+    .navbar-brand span {
+      font-weight: 600;
+    }
+
+    .page-header {
+      padding: 3rem 0 1.5rem;
+    }
+
+    .page-header h1 {
+      font-weight: 600;
+    }
+
+    .product-card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      background-color: #ffffff;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.17);
+    }
+
+    .product-img-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-img-wrapper img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover .product-img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+   
+
+    .rating {
+      font-size: 0.85rem;
+      color: #f59e0b;
+    }
+
+    .filter-bar {
+      border-radius: 999px;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      padding: 0.25rem 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      .page-header {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <span class="fs-2">MyStore</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <main class="container">
+    
+    <section class="page-header">
+      <div class="row align-items-center gy-3">
+        <div class="col-12 col-lg-6">
+          <h1 class="mb-1 text-white">Our Products</h1>
+          <p class="text-white mb-0">
+            High quality products.
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          
+            <div class="input-group">
+              
+              <input
+                type="text"
+                class="form-control border-0"
+                placeholder="Search products..."
+                aria-label="Search products"
+              />
+            </div>
+            
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="pb-5">
+      <div class="row g-4">
+
+        <!-- Product 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              
+              <img
+                src="https://sothebys-md.brightspotcdn.com/dims4/default/9126b85/2147483647/strip/true/crop/4858x4858+0+0/resize/385x385!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F36%2F9d%2Fd737f7bc4681aaa06f7e48978eeb%2Fhk1109-bwbj6-2.jpg"
+                alt="Wireless Headphones"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Fashion Handbag</h5>
+              <p class="card-text text-muted small mb-2">
+              Elegant designer handbag with detailed patterns, perfect for everyday style.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  129 
+                </div>
+                <div class="rating">★ 4.7</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              
+              <img
+                src="https://craftandglory.in/cdn/shop/files/SON00655copy.jpg?v=1714996461&width=1946"
+                alt="Leather Tote Bag"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Leather Tote Bag</h5>
+              <p class="card-text text-muted small mb-2">
+              Premium burgundy leather tote ideal for work and casual outings.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  199
+                </div>
+                <div class="rating">★ 4.5</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              
+              <img
+                src="https://5.imimg.com/data5/SELLER/Default/2025/5/510556108/PZ/ID/HI/93549368/led-digital-wrist-watch-500x500.jpg"
+                alt="Smartwatch"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Smartwatch</h5>
+              <p class="card-text text-muted small mb-2">
+              Modern smartwatch with a sleek display and comfortable wristband.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  89 
+                </div>
+                <div class="rating">★ 4.3</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              <img
+                src="https://www.fossil.com/on/demandware.static/-/Library-Sites-FossilSharedLibrary/default/dw294e3664/2025/HO25/set_10272025_global_holiday_lp/watches/Watches_LP_carousel_Style_Mens_classic.jpg"
+                alt="Luxury Chronograph Watch"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Luxury Chronograph Watch</h5>
+              <p class="card-text text-muted small mb-2">
+              High-end analog watch featuring a multi dial chronograph design.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  749
+                </div>
+                <div class="rating">★ 4.8</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaYicaM2JDkT1ctcmmUgR2-U_qULyqU0CclA&s"
+                alt="Blue Dial Wristwatch"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Blue Dial Wristwatch</h5>
+              <p class="card-text text-muted small mb-2">
+                Classic wristwatch with a metallic strap and radiant blue dial.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  39
+                </div>
+                <div class="rating">★ 4.4</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              <img
+                src="https://i5.walmartimages.com/asr/9afcdafb-6ccf-4ca5-a94a-734101b9ba9d.a960e085795ff750e17cc9bddbc0ad0f.jpeg"
+                alt="Women’s Platform Sandals"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Women’s Platform Sandals</h5>
+              <p class="card-text text-muted small mb-2">
+                Stylish platform heels designed for comfort and summer outfits.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  59
+                </div>
+                <div class="rating">★ 4.0</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              <img
+                src="https://melissaindia.com/cdn/shop/products/black-moccasins-women-s_1024x.jpg?v=1734212335"
+                alt="Black Loafers"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Black Loafers</h5>
+              <p class="card-text text-muted small mb-2">
+                Glossy black slip-on loafers with a formal yet trendy look.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  79
+                </div>
+                <div class="rating">★ 4.6</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <div class="product-img-wrapper">
+              <img
+                src="https://www.campusshoes.com/cdn/shop/products/RAISE_WHT_f1a5a2ec-8a23-4795-a796-0da7455dc57a.jpg?v=1757593683"
+                alt="White Sports Sneakers"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">White Sports Sneakers</h5>
+              <p class="card-text text-muted small mb-2">
+                Lightweight white sneakers perfect for daily wear and fitness.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="price">
+                  59
+                </div>
+                <div class="rating">★ 4.2</div>
+              </div>
+              <button class="btn btn-dark w-100 mt-auto">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4 border-top bg-black mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="text-white small">
+        © 2025 MyStore. All rights reserved.
+      </span>
+      <div class="d-flex gap-3 small">
+        <a href="#" class="text-white text-decoration-none">Privacy</a>
+        <a href="#" class="text-white text-decoration-none">Terms</a>
+        <a href="#" class="text-white text-decoration-none">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
